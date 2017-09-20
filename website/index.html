@@ -1,84 +1,115 @@
+</script>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <!-- styles  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" />
-  <link rel="stylesheet" href="css/style.css">
-
-
-  <!-- fonts  -->
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-  <title>Fun Weather</title>
-</head>
-
+    <title>GZD</title>
+	
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/style - Copy.css" rel="stylesheet">
+	
 <body>
-  <section id="banner">     
-    <!-- Vul hier de code in die voor de banner gebruikt gaat worden -->
-    <div class="center-parent">
-      <div class="center"><h3>God Zei Drank</h3></div>
-      <div class="center"><h5>Home</h5></div>
-      <div class="center"><h5>Features</h5></div>
-      <div class="center"><h5>Reviews</h5></div>
-      <div class="center"><h5>Download</h5></div>
-      <i class="fa fa-facebook"  style="font-size:25px" aria-hidden="true"></i>
-      <i class="fa fa-instagram" style="font-size:20px" aria-hidden="true"></i>
-      <i class="fa fa-twitter" style="font-size:20px" aria-hidden="true"></i>
-      
-  
-</div>
-<div class="header">
-    <img style="margin: 0px 0px" src="D:\School\Project 2/bar Background.png"  align="center">
-     <h1>Get the most fun weather app</h1>
-     
-     <p>Simple, nice and user-friendly application of the weather. Only useful information.</p>
-     <br>
-     <a class="button button_primary">Download</a>
-     <a class="button button_secondary">Features</a>
-    
-     </div>
-  
-   
-   <!-- componenten -->
-   
-   <!-- Gebruik font awesome voor de icons op de website http://fontawesome.io/ -->
+	<div id="wrapper">
+		
+		<nav class="navbar navbar-custom" role="navigation">
+			<div class="container navigation">
+			
+				<div class="navbar-brand">
+					
+				
+		
+					
+				</div>
+				<a id="intro" class="smooth"></a>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+				  <ul class="nav navbar-nav">
+					
+					<li><a href="#intro">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#app">App</a></li>
+					<li><a href="#img">Screenshots</a></li>
+				  </ul>
+				</div>
+	
+				<div class="intro">
+					<a id="intro"></a>
+					
+					
+					<h2>God Zei Bier</h2>
+					<p>De zelf tappende bier, Laat je klanten zelf hun bier tappen</p>
 
-  </section>
+				</div>
+			
+				<div id="page1">
+						<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+								<ul class="nav navbar-nav">
+								  
+								  <li><a href="#intro">Home</a></li>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#app">App</a></li>
+								  <li><a href="#img">Screenshots</a></li>
+								</ul>
+							  </div>
+						
+					  </div>
+					  <a id="about"></a>
+					  About page goes here.
+					  <div id="page2">
+							<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+									<ul class="nav navbar-nav">
+									  
+									  <li><a href="#intro">Home</a></li>
+									  <li><a href="#about">About</a></li>
+									  <li><a href="#app">App</a></li>
+									  <li><a href="#img">Screenshots</a></li>
+									</ul>
+								  </div>
 
-  <section id="features">
-   <!-- Vul aan.. -->
-   <br>
-   <br>
-   <br>
-      <div class="lowertext">
-    <h2>Perfect features</h2>
- 
-   </div>
-  </section>
+							
+						  </div>
+						  <a id="app"></a>
+						  About App goes here.
+						  <div id="page3">
+								<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+										<ul class="nav navbar-nav">
+										  
+										  <li><a href="#intro">Home</a></li>
+										  <li><a href="#about">About</a></li>
+										  <li><a href="#app">App</a></li>
+										  <li><a href="#img">Screenshots</a></li>
+										</ul>
+									  </div>
+								
+								 screenshots go here
+							  </div>
+							  <a id="img"></a>
 
-  <section id="widgets">
-    <!-- Vul aan.. -->
-  </section>
+<script src="js/jquery-1.10.2.js"></script>
+<script>$(document).ready(function(){
+		$('a[href*=#]').click(function() {
+		  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+		  && location.hostname == this.hostname) {
+			var $target = $(this.hash);
+			$target = $target.length && $target
+			|| $('[name=' + this.hash.slice(1) +']');
+			if ($target.length) {
+			  var targetOffset = $target.offset().top;
+			  $('html,body')
+			  .animate({scrollTop: targetOffset}, 1000);
+			 return false;
+			}
+		  }
+		});
+	  });</script>
 
-  <section id="screenshots">
-    <!-- Vul aan.. -->
-  </section>
-
-  <section id="reviews">
-     <!-- Vul aan.. -->
-  </section>
-
-  <section id="download">
-     <!-- Vul aan.. -->
-  </section>
-
-  <footer>
-    
-  </footer>
 </body>
+
 </html>
