@@ -2,10 +2,10 @@
 const db = require("../database.js");
 
 // The path to use
-const PATH = "/group/"
+const PATH = "/api/group/"
 
 module.exports = (server) => {
-	server.post(PATH + "update", function functionName(req, res, next) {
+	server.post(PATH + "update", function(req, res, next) {
 		if (!req.params.usercode || !req.params.groupcode) {
 			res.send(400, {success: false, error: "Missing fields"});
 			next();
@@ -32,7 +32,7 @@ module.exports = (server) => {
 		}
 	});
 
-	server.get(PATH + "list", function functionName(req, res, next) {
+	server.get(PATH + "list", function(req, res, next) {
 		db.groups.find({}, (err, cursor) => {
 			// Let the client know if it didn't work
 			if (!cursor || err) {
@@ -59,7 +59,7 @@ module.exports = (server) => {
 		});
 	});
 
-	server.post(PATH + "pay", function functionName(req, res, next) {
+	server.post(PATH + "pay", function(req, res, next) {
 		if (!req.params.groupcode) {
 			res.send(400, {success: false, error: "Missing fields"});
 			next();

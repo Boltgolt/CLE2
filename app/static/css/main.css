@@ -1,0 +1,142 @@
+body {
+	margin: 0;
+}
+
+.mdc-toolbar {
+	z-index: 9999;
+}
+
+.mdc-temporary-drawer {
+	z-index: 99999;
+}
+
+.mdc-temporary-drawer__header {
+	background-image: url(/app/static/img/headerBeer.png);
+	background-size: cover;
+	position: relative;
+}
+
+.mdc-temporary-drawer__header-content > span {
+	position: absolute;
+	background: rgba(0, 0, 0, .3);
+	border-radius: 3px;
+	bottom: 12px;
+	right: 22px;
+	font-weight: bold;
+	padding: 2px 8px;
+}
+
+.mdc-temporary-drawer__header-content i {
+	vertical-align: middle;
+	transform: scale(.8);
+	display: inline-block;
+	margin-left: -5px;
+}
+
+.mdc-temporary-drawer__header-content {
+	color: #fff
+}
+
+.mdc-list-item__start-detail {
+	vertical-align: middle;
+	margin-top: 9px;
+	margin-right: 20px;
+}
+
+.menuHamburger {
+	margin-top: 19px;
+	margin-left: 24px;
+	margin-right: 16px;
+}
+
+.menuHamburger div {
+	width: 18px;
+	height: 2px;
+	background-color: white;
+	margin: 3px 0;
+}
+
+#qrVideo {
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	background: #000;
+}
+
+#qr > div {
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .2);
+	position: absolute;
+	width: 100vw;
+}
+
+#qr > div > div {
+	position: relative;
+    border: 2px solid rgba(255,255,255,.6);
+	height: 60vw;
+	width: 60vw;
+	left: 20vw;
+	top: 25vw;
+}
+
+#qr > div > div > div {
+	position: absolute;
+    border: 2px solid rgba(255,255,255,.3);
+	height: 15vw;
+	width: 15vw;
+	animation: qrZoom 2s infinite;
+}
+
+#qr > div > div > div:first-child {
+	top: -7.5vw;
+	left: -7.5vw;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+}
+
+#qr > div > div > div:nth-child(2) {
+	top: -7.5vw;
+	right: -7.5vw;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+}
+
+#qr > div > div > div:nth-child(3) {
+	bottom: -7.5vw;
+	right: -7.5vw;
+	border-left-width: 0px;
+	border-top-width: 0px;
+}
+
+#qr > div > div > div:last-child {
+	bottom: -7.5vw;
+	left: -7.5vw;
+	border-right-width: 0px;
+	border-top-width: 0px;
+}
+
+@keyframes qrZoom {
+	0% {
+		transform: scale(.8);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(.8);
+	}
+}
+
+#qr > div p {
+	position: absolute;
+	width: 70vw;
+	left: 15vw;
+	top: 65vh;
+	text-align: center;
+	color: white;
+}
+
+#qr > div p i {
+	vertical-align: middle;
+}

@@ -2,10 +2,10 @@
 const db = require("../database.js");
 
 // The path to use
-const PATH = "/user/"
+const PATH = "/api/user/"
 
 module.exports = (server) => {
-	server.post(PATH + "create", function functionName(req, res, next) {
+	server.post(PATH + "create", function(req, res, next) {
 		if (!req.params.usercode) {
 			res.send(400, {success: false, error: "Missing fields"});
 			next();

@@ -2,10 +2,10 @@
 const db = require("../database.js");
 
 // The path to use
-const PATH = "/drink/"
+const PATH = "/api/drink/"
 
 module.exports = (server) => {
-	server.put(PATH + "add", function functionName(req, res, next) {
+	server.put(PATH + "add", function(req, res, next) {
 		// Check if all fields are there and fail if they aren't
 		if (!req.params.usercode || !req.params.drink || !req.params.amount) {
 			res.send(400, {success: false, error: "Missing fields"});

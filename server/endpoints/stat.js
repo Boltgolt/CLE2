@@ -2,10 +2,10 @@
 const db = require("../database.js");
 
 // The path to use
-const PATH = "/stat/"
+const PATH = "/api/stat/"
 
 module.exports = (server) => {
-	server.get(PATH + "list", function functionName(req, res, next) {
+	server.get(PATH + "list", function(req, res, next) {
 		db.statistics.findOne({}, (err, result) => {
 			delete result._id
 			result.success = true

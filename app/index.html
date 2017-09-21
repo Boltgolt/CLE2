@@ -1,21 +1,80 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
+<html class="mdc-typography">
 
-		<link rel="manifest" href="manifest.json">
+<head>
+	<meta charset="utf-8">
 
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="application-name" content="GZD">
-		<meta name="apple-mobile-web-app-title" content="GZD">
-		<meta name="msapplication-starturl" content="/">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="manifest" href="manifest.json">
 
-		<title></title>
-	</head>
-	<body>
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="GZD">
+	<meta name="apple-mobile-web-app-title" content="GZD">
+	<meta name="msapplication-starturl" content="/">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	</body>
+	<title>God Zei Drank</title>
+
+	<link rel="stylesheet" rel="stylesheet" href="/app/static/css/material-components-web.min.css">
+	<link rel="stylesheet" rel="stylesheet" href="/app/static/css/materialdesignicons.min.css">
+
+	<link rel="stylesheet" rel="stylesheet" href="/app/static/css/main.css">
+
+	<script src="/app/static/js/instascan.min.js"></script>
+	<script src="/app/static/js/material-components-web.min.js"></script>
+
+	<script src="/app/static/js/camera.js"></script>
+	<script src="/app/static/js/main.js"></script>
+</head>
+
+<body>
+	<header class="mdc-toolbar">
+		<div class="mdc-toolbar__row">
+			<section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+				<div class="menuHamburger">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<span id="headerTitle" class="mdc-toolbar__title">Drankjes</span>
+			</section>
+		</div>
+	</header>
+
+	<aside class="mdc-temporary-drawer mdc-typography">
+		<nav class="mdc-temporary-drawer__drawer">
+			<header class="mdc-temporary-drawer__header">
+				<div class="mdc-temporary-drawer__header-content">
+					God Zei Drank
+					<span>
+						<i class="mdi mdi-glass-mug" aria-hidden="true"></i>
+						<span id="menuLitres">0.0</span>
+						L
+					</span>
+				</div>
+			</header>
+			<nav id="icon-with-text-demo" class="mdc-temporary-drawer__content mdc-list">
+				<a class="mdc-list-item mdc-temporary-drawer--selected">
+					<i class="mdi mdi-qrcode mdc-list-item__start-detail" aria-hidden="true"></i> Scan glas
+				</a>
+			</nav>
+		</nav>
+	</aside>
+
+	<div id="qr">
+		<video id="qrVideo"></video>
+		<div>
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<p>
+				Scan de qr code <i class="mdi mdi-qrcode" aria-hidden="true"></i> op het glas om hem te koppelen.
+			</p>
+		</div>
+	</div>
+</body>
+
 </html>
