@@ -45,10 +45,14 @@ module.exports = (server) => {
 						// Handle the response and stop
 						else {
 							res.send(200, {success: true});
-							next();
+							next
 
-							db.upStat("drinks.total", 1)
 							db.upStat("drinks.ml", amount)
+
+							// Give all clients time to catch up to the last change
+							setTimeout(function () {
+								db.upStat("drinks.total", 1)
+							}, 150)
 						}
 					})
 				}

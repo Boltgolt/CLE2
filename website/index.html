@@ -1,114 +1,125 @@
-</script>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-    <title>GZD</title>
-	
-    <!-- css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link href="css/style - Copy.css" rel="stylesheet">
-	
+	<title>GZD</title>
+
+	<!-- css -->
+	<link href="/website/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="/website/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="/website/css/style - Copy.css" rel="stylesheet">
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/website/js/socket.js"></script>
+</head>
+
 <body>
 	<div id="wrapper">
-		
+
 		<nav class="navbar navbar-custom" role="navigation">
 			<div class="container navigation">
-			
+
 				<div class="navbar-brand">
-					
-				
-		
-					
+
+
+
+
 				</div>
 				<a id="intro" class="smooth"></a>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-				  <ul class="nav navbar-nav">
-					
-					<li><a href="#intro">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#app">App</a></li>
-					<li><a href="#img">Screenshots</a></li>
-				  </ul>
+					<ul class="nav navbar-nav">
+
+						<li><a href="#intro">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#app">App</a></li>
+						<li><a href="#img">Screenshots</a></li>
+					</ul>
 				</div>
-	
+
 				<div class="intro">
 					<a id="intro"></a>
-					
-					
+
+
 					<h2>God Zei Bier</h2>
 					<p>De zelf tappende bier, Laat je klanten zelf hun bier tappen</p>
 
+					<div id="stats">
+						<div><span id="statsUsersNum">0</span> gebruikers</div>
+						<div><span id="statsDrinksNum">0</span> drankjes</div>
+						<div><span id="statsDrinksLiter">0</span> liter</div>
+					</div>
+
 				</div>
-			
+
 				<div id="page1">
-						<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-								<ul class="nav navbar-nav">
-								  
-								  <li><a href="#intro">Home</a></li>
-								  <li><a href="#about">About</a></li>
-								  <li><a href="#app">App</a></li>
-								  <li><a href="#img">Screenshots</a></li>
-								</ul>
-							  </div>
-						
-					  </div>
-					  <a id="about"></a>
-					  About page goes here.
-					  <div id="page2">
-							<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-									<ul class="nav navbar-nav">
-									  
-									  <li><a href="#intro">Home</a></li>
-									  <li><a href="#about">About</a></li>
-									  <li><a href="#app">App</a></li>
-									  <li><a href="#img">Screenshots</a></li>
-									</ul>
-								  </div>
+					<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+						<ul class="nav navbar-nav">
 
-							
-						  </div>
-						  <a id="app"></a>
-						  About App goes here.
-						  <div id="page3">
-								<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-										<ul class="nav navbar-nav">
-										  
-										  <li><a href="#intro">Home</a></li>
-										  <li><a href="#about">About</a></li>
-										  <li><a href="#app">App</a></li>
-										  <li><a href="#img">Screenshots</a></li>
-										</ul>
-									  </div>
-								
-								 screenshots go here
-							  </div>
-							  <a id="img"></a>
+							<li><a href="#intro">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#app">App</a></li>
+							<li><a href="#img">Screenshots</a></li>
+						</ul>
+					</div>
 
-<script src="js/jquery-1.10.2.js"></script>
-<script>$(document).ready(function(){
-		$('a[href*=#]').click(function() {
-		  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-		  && location.hostname == this.hostname) {
-			var $target = $(this.hash);
-			$target = $target.length && $target
-			|| $('[name=' + this.hash.slice(1) +']');
-			if ($target.length) {
-			  var targetOffset = $target.offset().top;
-			  $('html,body')
-			  .animate({scrollTop: targetOffset}, 1000);
-			 return false;
-			}
-		  }
-		});
-	  });</script>
+				</div>
+				<a id="about"></a> About page goes here.
+				<div id="page2">
+					<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+						<ul class="nav navbar-nav">
+
+							<li><a href="#intro">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#app">App</a></li>
+							<li><a href="#img">Screenshots</a></li>
+						</ul>
+					</div>
+
+
+				</div>
+				<a id="app"></a> About App goes here.
+				<div id="page3">
+					<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+						<ul class="nav navbar-nav">
+
+							<li><a href="#intro">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#app">App</a></li>
+							<li><a href="#img">Screenshots</a></li>
+						</ul>
+					</div>
+
+					screenshots go here
+				</div>
+				<a id="img"></a>
+
+				<script src="/website/js/jquery-1.10.2.js"></script>
+				<script>
+					$(document).ready(function() {
+						$('a[href*=#]').click(function() {
+							if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+								location.hostname == this.hostname) {
+								var $target = $(this.hash);
+								$target = $target.length && $target ||
+									$('[name=' + this.hash.slice(1) + ']');
+								if ($target.length) {
+									var targetOffset = $target.offset().top;
+									$('html,body')
+										.animate({
+											scrollTop: targetOffset
+										}, 1000);
+									return false;
+								}
+							}
+						});
+					});
+				</script>
 
 </body>
 

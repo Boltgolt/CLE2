@@ -5,6 +5,8 @@ const mongo = require("mongodb");
 const mongoClient = mongo.MongoClient;
 const objectId = mongo.ObjectID;
 
+const socket = require("./socket.js");
+
 // The db url to connect to
 const URL = "mongodb://localhost:27017";
 
@@ -72,7 +74,7 @@ module.exports = {
 			db.collection("statistics").count({}, (err, result) => {
 				if (result == 0) {
 					console.log("new stats generated");
-					
+
 					db.collection("statistics").insertOne({
 						drinks: {
 							total: 0,
@@ -126,6 +128,19 @@ module.exports = {
 
 		query["$inc"][stat] = add
 
-		db.collection("statistics").update({}, query)
+		db.collection("statistics").update({}, query, function(err, data) {
+			db.collection("statistics").find({}, function(err, data) {
+			console.log(data);
+			socket.pushStats({
+				users: {
+					total: data.value.users.total
+				},
+				drinks: {
+					total: data.value.drinks.total,
+					ml: data.value.drinks.ml
+				}
+			})
+			})
+		})
 	}
 }

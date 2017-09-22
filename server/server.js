@@ -16,6 +16,8 @@ db.connect();
 // Enable POST data as params
 server.use(restifyPlugins.bodyParser());
 
+require("./socket.js")(server)
+
 // Start listening for API requests
 require("./endpoints/drink.js")(server)
 require("./endpoints/group.js")(server)
@@ -30,13 +32,14 @@ server.get(/\/app\/?.*/, restifyPlugins.serveStatic({
 
 // Serve index at /
 server.get("/", restifyPlugins.serveStatic({
-	directory: __dirname + "/site",
-	default: "/index.html"
+	directory: __dirname + "/../website",
+	default: "index.html"
 }))
 
 // Server static site assets
-server.get("/site", restifyPlugins.serveStatic({
-	directory: __dirname + "/site"
+server.get(/\/website\/?.*/, restifyPlugins.serveStatic({
+	directory: __dirname + "/../",
+	default: "index.html"
 }))
 
 // Redirect QR scans to the app

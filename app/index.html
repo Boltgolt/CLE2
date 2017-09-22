@@ -20,9 +20,11 @@
 
 	<link rel="stylesheet" rel="stylesheet" href="/app/static/css/main.css">
 
+	<script src="/socket.io/socket.io.js"></script>
 	<script src="/app/static/js/instascan.min.js"></script>
 	<script src="/app/static/js/material-components-web.min.js"></script>
 
+	<script src="/app/static/js/api.js"></script>
 	<script src="/app/static/js/camera.js"></script>
 	<script src="/app/static/js/main.js"></script>
 </head>
@@ -36,7 +38,7 @@
 					<div></div>
 					<div></div>
 				</div>
-				<span id="headerTitle" class="mdc-toolbar__title">Drankjes</span>
+				<span id="headerTitle" class="mdc-toolbar__title"></span>
 			</section>
 		</div>
 	</header>
@@ -55,7 +57,7 @@
 			</header>
 			<nav id="icon-with-text-demo" class="mdc-temporary-drawer__content mdc-list">
 				<a class="mdc-list-item mdc-temporary-drawer--selected">
-					<i class="mdi mdi-qrcode mdc-list-item__start-detail" aria-hidden="true"></i> Scan glas
+					<i class="mdi mdi-qrcode-scan mdc-list-item__start-detail" aria-hidden="true"></i> Scan glas
 				</a>
 			</nav>
 		</nav>
