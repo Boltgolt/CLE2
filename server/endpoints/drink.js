@@ -45,7 +45,7 @@ module.exports = (server) => {
 						// Handle the response and stop
 						else {
 							res.send(200, {success: true});
-							next
+							next()
 
 							db.upStat("drinks.ml", amount)
 

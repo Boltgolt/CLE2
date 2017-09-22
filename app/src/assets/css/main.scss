@@ -1,0 +1,61 @@
+body {
+	margin: 0;
+}
+
+.mdc-toolbar {
+	z-index: 9999;
+}
+
+.mdc-temporary-drawer {
+	z-index: 99999;
+}
+
+.mdc-temporary-drawer__header {
+	background-image: url("../img/headerBeer.png");
+	background-size: cover;
+	position: relative;
+}
+
+.mdc-temporary-drawer__header-content > span {
+	position: absolute;
+	background: rgba(0, 0, 0, .3);
+	border-radius: 3px;
+	bottom: 12px;
+	right: 22px;
+	font-weight: bold;
+	padding: 2px 8px;
+}
+
+.mdc-temporary-drawer__header-content i {
+	vertical-align: middle;
+	transform: scale(.8);
+	display: inline-block;
+	margin-left: -5px;
+}
+
+.mdc-temporary-drawer__header-content {
+	color: #fff
+}
+
+.mdc-list-item__start-detail {
+	vertical-align: middle;
+	margin-top: 9px;
+	margin-right: 20px;
+} 
+
+.menuHamburger {
+	margin-top: 19px;
+	margin-left: 24px;
+	margin-right: 16px;
+
+	div {
+		width: 18px;
+		height: 2px;
+		background-color: white;
+		margin: 3px 0;
+	}
+}
+
+@import "vars";
+@import "qr";
+@import "stream";

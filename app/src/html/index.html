@@ -15,18 +15,20 @@
 
 	<title>God Zei Drank</title>
 
-	<link rel="stylesheet" rel="stylesheet" href="/app/static/css/material-components-web.min.css">
-	<link rel="stylesheet" rel="stylesheet" href="/app/static/css/materialdesignicons.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Mono" rel="stylesheet">
+	<link rel="stylesheet" rel="stylesheet" href="static/css/material-components-web.min.css">
+	<link rel="stylesheet" rel="stylesheet" href="static/css/materialdesignicons.min.css">
 
-	<link rel="stylesheet" rel="stylesheet" href="/app/static/css/main.css">
+	<link rel="stylesheet" rel="stylesheet" href="static/css/main.css">
 
 	<script src="/socket.io/socket.io.js"></script>
-	<script src="/app/static/js/instascan.min.js"></script>
-	<script src="/app/static/js/material-components-web.min.js"></script>
+	<script src="static/js/instascan.min.js"></script>
+	<script src="static/js/material-components-web.min.js"></script>
 
-	<script src="/app/static/js/api.js"></script>
-	<script src="/app/static/js/camera.js"></script>
-	<script src="/app/static/js/main.js"></script>
+	<script src="static/js/api.js"></script>
+	<script src="static/js/camera.js"></script>
+	<script src="static/js/socket.js"></script>
+	<script src="static/js/main.js"></script>
 </head>
 
 <body>
@@ -63,20 +65,10 @@
 		</nav>
 	</aside>
 
-	<div id="qr">
-		<video id="qrVideo"></video>
-		<div>
-			<div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-			<p>
-				Scan de qr code <i class="mdi mdi-qrcode" aria-hidden="true"></i> op het glas om hem te koppelen.
-			</p>
-		</div>
-	</div>
+	//= components/stream.html
+
+	//= components/qr.html
+
 </body>
 
 </html>

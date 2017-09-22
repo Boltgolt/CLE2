@@ -8,7 +8,10 @@ var camera = {
 
 		scanner.addListener("scan", function(content) {
 			if (content.slice(0, 21) == "http://gzd.boltgo.lt/") {
-				console.log(content.slice(21, 31))
+				var usercode = content.slice(21, 31)
+
+				console.log("found usercode ", usercode);
+				sendUserCode(usercode)
 			}
 		})
 

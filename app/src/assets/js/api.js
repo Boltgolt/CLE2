@@ -7,9 +7,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		})
 	});
 
+
 	socket.on("newdata", function(data) {
-		document.getElementById("statsUsersNum") = data.users.total
-		document.getElementById("statsDrinksNum") = data.drinks.total
-		document.getElementById("statsDrinksMl") = data.drinks.ml
+		// document.getElementById("statsUsersNum") = data.users.total
+		// document.getElementById("statsDrinksNum") = data.drinks.total
+		// document.getElementById("statsDrinksMl") = data.drinks.ml
 	});
 })
