@@ -47,6 +47,13 @@ textarea {
 	margin-top: 5px;
 	padding-bottom: 0;
   }
+  .navbar-nav{
+	overflow: hidden;
+    
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
 
 .navbar.navbar-custom ul.nav.navbar-nav {
 	margin-top: 15px;
@@ -95,9 +102,10 @@ padding-top: 200px;
 
 #page2{
 	padding-top: 1200px;
+	
 }
 
 #page3{
 	padding-top: 1200px;
-	padding-bottom: 900px;
+
 }
