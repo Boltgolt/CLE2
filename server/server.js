@@ -42,6 +42,12 @@ server.get(/\/website\/?.*/, restifyPlugins.serveStatic({
 	default: "index.html"
 }))
 
+// Server bar assets
+server.get(/\/bar\/?.*/, restifyPlugins.serveStatic({
+	directory: __dirname + "/../",
+	default: "index.html"
+}))
+
 // Redirect QR scans to the app
 server.get(/\/[0-9A-F]{10}/, function(req, res, next) {
 	res.redirect("/app#" + req.url.slice(1), next);
