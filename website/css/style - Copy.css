@@ -95,19 +95,18 @@ padding-top: 200px;
 	padding-top: 0px;
 }
 
-#page1{
-	padding-top: 1080px;
-}
 
-
-
-#page2{
+#page{
 	padding-top: 1200px;
 	
 }
+ #pageEnd{
+padding-top: 1200px;
+padding-bottom: 1200px;
+}
 
-#page3{
-	padding-top: 1200px;
-	padding-bottom: 800px;
-
+#screenshots{
+	padding-top: 200px;
+	width:200px;
+	float:left;
 }
