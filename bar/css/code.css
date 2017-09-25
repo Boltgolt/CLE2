@@ -1,0 +1,58 @@
+#codeScreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(70,148,187,1);
+	opacity: 0;
+	transform: scale(.1);
+	display: none;
+	transition: all .15s;
+}
+
+#codeLetters {
+	position: absolute;
+	width: 100%;
+	top: 15%;
+	font-size: 0;
+	height: 120px;
+	text-align: center;
+}
+
+#codeLetters > div {
+	height: 100%;
+	font-size: 100px;
+	display: inline-block;
+	width: 100px;
+	border-bottom: 10px solid #fff;
+	vertical-align: text-bottom;
+	color: #fff;
+	margin: 0 16px;
+}
+
+#codeScreen > div:last-child {
+	position: absolute;
+	height: 10%;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	opacity: .8;
+}
+
+#codeScreen > div:last-child > span {
+	display: inline-block;
+	color: #fff;
+	padding: 0 50px;
+}
+
+#codeScreen > div:last-child > span > span {
+	display: inline-block;
+	color: #fff;
+	border: 3px solid #fff;
+	border-radius: 5px;
+	padding: 4px 12px;
+	text-transform: uppercase;
+	margin: 0 6px;
+}
