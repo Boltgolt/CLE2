@@ -19,7 +19,7 @@ html {
     height: 100%;
 }
 a{
-	color: #666;
+	color: #D1A34F;
 	font-family: "Open Sans";
 	font-size: 14px;
 	font-weight: bold;
@@ -49,10 +49,11 @@ textarea {
   }
   .navbar-nav{
 	overflow: hidden;
-    
+    background-color: #6E3E1E;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+	width: 100%; /* Full width */
+	
 }
 
 .navbar.navbar-custom ul.nav.navbar-nav {
@@ -107,5 +108,6 @@ padding-top: 200px;
 
 #page3{
 	padding-top: 1200px;
+	padding-bottom: 800px;
 
 }
