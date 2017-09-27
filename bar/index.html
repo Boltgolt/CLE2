@@ -19,14 +19,27 @@
 
 <body>
 	<div id="overview">
-		<div id="overviewList">
+		<div id="overviewList"></div>
+		<div id="overviewBar">
+			<ul>
+				<li>
+					<span>Inhoud tap:</span>
+					<span><span id="overviewTapMl"></span> ml</span>
+				</li>
+				<li>
+					<span>Glazen:</span>
+					<span><span id="overviewGlasses"></span>/30</span>
+				</li>
+				<li>
+					<span>Aantal rekeningen</span>
+					<span id="overviewBills">18</span>
+				</li>
+			</ul>
 			<div>
-				<span>bedrag naam</span>
-				<span>adfadfa</span>
+				<span id="overviewTime"></span>
+				<span id="overviewDate"></span>
+				<span id="overviewState" class="down">Server status</span>
 			</div>
-		</div>
-		<div>
-				
 		</div>
 	</div>
 	<div id="codeScreen" class="waiting">
@@ -35,13 +48,11 @@
 			<div></div>
 			<div></div>
 		</div>
-		<div>
-			<table id="codeTable">
-				<tr>
-					<th>Unieke glazen</th>
-					<th></th>
-				</tr>
-			</table>
+		<div id="codeData">
+			<h3 id="codeBill"></h3>
+			<span>Groep van <span id="codeName"></span></span>
+			<span><span id="codeGlasses"></span></span>
+			<span><span id="codeMl"></span> ml</span>
 		</div>
 		<div>
 			<span>
