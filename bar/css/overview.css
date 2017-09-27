@@ -1,10 +1,9 @@
-#overviewList {
+#overviewList, #overviewBar {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 80%;
-    display: flex;
 }
 
 #overviewList > div {
@@ -16,4 +15,67 @@
 
 #overviewList > div > span {
     display: block;
+}
+
+#overviewBar {
+    left: 80%;
+    width: 20%;
+    background-color: rgb(70,148,187);
+    color: white;
+}
+
+#overviewBar > ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+
+#overviewBar > ul > li {
+    padding-bottom: 20px;
+}
+
+#overviewBar > ul > li > span {
+    display: block;
+}
+
+#overviewBar > ul > li > span:first-child {
+    font-weight: bold;
+}
+
+#overviewBar > div {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    z-index: 999999;
+}
+
+#overviewBar > div > span {
+    display: block;
+}
+
+#overviewBar > div > span:first-child {
+    font-size: 26px;
+}
+
+#overviewBar > div > span:last-child {
+    padding-top: 20px;
+}
+
+#overviewBar > div > span:last-child::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+#overviewBar > div > span.up:last-child::before {
+    background: #1ebf4d;
+}
+
+#overviewBar > div > span.down:last-child::before {
+    background: red;
 }

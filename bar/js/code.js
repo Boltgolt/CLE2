@@ -88,18 +88,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				codeLetters[i].innerHTML = searchResult.groupcode[i]
 			}
 
-			var drinks = {}
+			var totalMl = 0
 			var users = []
 
 			for (var i = 0; i < searchResult.drinks.length; i++) {
 				var drink = searchResult.drinks[i]
 
-				if (drinks[drink.type] > 0) {
-					drinks[drink.type] += drink.amount
-				}
-				else {
-					drinks[drink.type] = drink.amount
-				}
+				totalMl += drink.amount
 
 				if (users.indexOf(drink.usercode) == -1) {
 					users.push(drink.usercode)
@@ -108,11 +103,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 			var html = "<tr><th>Type (" + users.length + " " + (users.length == 1 ? "uniek glas" : "unieke glazen") + ")</th><th>ML</th></tr>"
 
-			for (var type in drinks) {
-				html += "<tr><td>" + type + "</td><td>" + drinks[type] + "</td></tr>"
-			}
-
-			document.getElementById("codeTable").innerHTML = html
+			document.getElementById("codeBill").innerHTML = ("€" + (Math.round(totalMl * .008 * 100) / 100)).replace(".", ",")
+			document.getElementById("codeMl").innerHTML = (totalMl)
+			document.getElementById("codeGlasses").innerHTML = (users.length) + ' gla' + (users.length == 1 ? "s" : "zen")
 
 			console.log(users);
 			console.log(drinks);
