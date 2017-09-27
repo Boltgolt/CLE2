@@ -1,0 +1,19 @@
+#overviewList {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80%;
+    display: flex;
+}
+
+#overviewList > div {
+    width: 33.33333%;
+    display: inline-block;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#overviewList > div > span {
+    display: block;
+}
