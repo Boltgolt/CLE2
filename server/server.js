@@ -54,6 +54,6 @@ server.get(/\/[0-9A-F]{10}/, function(req, res, next) {
 })
 
 // Open the port and start listening for incomming connections
-server.listen(8080, function() {
+server.listen(80, function() {
 	console.log(server.name + " ready for incomming connections");
 })

@@ -107,7 +107,7 @@ textarea {
 	padding-top: 250px;
 	text-align: center;
 	color: white;
-	background-image: url('../img/bar background.png');
+	background-image: url('../img/barBackground.png');
 	height: 720px;
 }
 
@@ -141,7 +141,7 @@ textarea {
 	height: 200px;
 	width: 200px;
 	float: left;
-	
+
 }
 
 #stats {
@@ -150,7 +150,7 @@ textarea {
 
 #stats > div {
 	flex: 1;
-	
+
 }
 
 img {

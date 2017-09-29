@@ -11,11 +11,10 @@
 
 	<!-- css -->
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link href="css/style - Copy.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 
 	<script src="/socket.io/socket.io.js"></script>
-	<script src="/website/js/socket.js"></script>
+	<script src="js/socket.js"></script>
 </head>
 
 <body>
@@ -25,9 +24,6 @@
 			<div class="container navigation">
 
 				<div class="navbar-brand">
-
-
-
 
 				</div>
 				<a class="intro" class="smooth"></a>
@@ -50,7 +46,7 @@
 					<h2>God Zei Drank</h2>
 					<h4>De zelf tappende bier, laat je klanten zelf hun bier tappen.</h4>
 				</div>
-					
+
 				<div id="stats">
 					<div>
 						<img class="statsIcons" src="../website/img/3personen.svg" alt="user">
@@ -66,40 +62,34 @@
 					</div>
 				</div>
 
-				
+
 
 				<div class="page">
 					<a class="about"></a>
 					<h1>Ons product.</h1><br>
 					<h3>Hoe werkt het?</h3>
-					<p>Ons product is een biertap waar je bier kan tappen zonder telkens af te rekenen. Dit komt omdat er een QR-code aanwezig
-						is op het glas van gebruik. </p>
-					<p>Als je dit glas voor de tap houdt wordt deze code gescand en begint te tap met draaien. Kies zelf de hoeveelheid die
-						je erin wilt doen en hoe vaak je wilt tappen. Vergeet niet af te rekenen! 😉</p>
+					<p>Ons product is een biertap waar je bier kan tappen zonder telkens af te rekenen. Dit komt omdat er een QR-code aanwezig is op het glas van gebruik. </p>
+					<p>Als je dit glas voor de tap houdt wordt deze code gescand en begint te tap met draaien. Kies zelf de hoeveelheid die je erin wilt doen en hoe vaak je wilt tappen. Vergeet niet af te rekenen! 😉</p>
 					<h3>Waar te gebruiken?</h3>
-					<p>Dit product kan je in alle soorten kroegen en bars te gebruiken. Het product is het meest efficiënt in drukkere kroegen/bars,
-						dit omdat de barman/vrouw niet iedereen tegelijk kan bedienen op drukkere dagen.</p>
+					<p>Dit product kan je in alle soorten kroegen en bars te gebruiken. Het product is het meest efficiënt in drukkere kroegen/bars, dit omdat de barman/vrouw niet iedereen tegelijk kan bedienen op drukkere dagen.</p>
 					<h3>Kosten van het product?</h3>
-					<p>De prijs van het product is rond de €99,99 –. Om dit product te bemachtigen neem dan contact op met één van onze medewerkers
-						die u verder kan helpen, scrol naar beneden voor de contactgegevens.</p>
+					<p>De prijs van het product is rond de €99,99 –. Om dit product te bemachtigen neem dan contact op met één van onze medewerkers die u verder kan helpen, scrol naar beneden voor de contactgegevens.</p>
 				</div>
 
 				<div class="page">
 					<a class="app"></a>
 					<h1>Onze app.</h1><br>
 					<IMG src="../website/img/Bierapp.jpg">
-					<p>Er zijn vele mogelijkheden in onze app. In onze app kan je zien hoeveel biertjes je op heeft en wat de prijs hiervan
-						is. Er is ook een mogelijkheid om jouw vrienden hieraan toe te voegen, hierdoor kun je zien hoeveel biertjes jouw vrienden
-						hebben gedronken. Er is ook een optie dat je voor jouw vrienden kan betalen i.p.v. alleen jezelf, de keuze is aan jou
-						😉</p>
+					<p>Er zijn vele mogelijkheden in onze app. In onze app kan je zien hoeveel biertjes je op heeft en wat de prijs hiervan is. Er is ook een mogelijkheid om jouw vrienden hieraan toe te voegen, hierdoor kun je zien hoeveel biertjes jouw vrienden hebben
+						gedronken. Er is ook een optie dat je voor jouw vrienden kan betalen i.p.v. alleen jezelf, de keuze is aan jou 😉
+					</p>
 
 				</div>
 
 				<div class="page">
 					<a class="img"></a>
 					<h1>Screenshots go here</h1>
-					<iframe width="720" height="480" src="https://tinkercad.com/embed/hvfnJmaazfr?editbtn=1" frameborder="0" marginwidth="0"
-					    marginheight="0" scrolling="no"></iframe>
+					<iframe width="720" height="480" src="https://tinkercad.com/embed/hvfnJmaazfr?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 				</div>
 
 				<div class="page">
@@ -124,8 +114,8 @@
 	</div>
 	<script src="js/jquery-1.10.2.js"></script>
 	<script>
-		$(document).ready(function () {
-			$('a[href*=#]').click(function () {
+		$(document).ready(function() {
+			$('a[href*=#]').click(function() {
 				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
 					location.hostname == this.hostname) {
 					var $target = $(this.hash);
