@@ -1,160 +1,145 @@
 /* ==== Google font ==== */
-
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Lato:100,400,300,700');
-
 /* --- pe-icon-7-stroke --- */
 
 body {
-	width: 100%;
-	height: 100%;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	color: #666;
-	background: #300A07;
-	font-size: 16px;
-	line-height: 1.6em;
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #666;
+    background-color: rgba(70, 148, 187, 1);
+    font-size: 16px;
+    line-height: 1.6em;
 }
 
 body h1 {
-	font-size: 22px;
-	font-family: 'Open Sans', sans-serif;
-	color: #999;
-	font-weight: bold;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    color: #4694BB;
+    font-weight: bold;
 }
 
 body p {
-	font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
-	color: #999;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #4694BB;
 }
 
 body h3 {
-	font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
-	color: #999;
-	font-weight: bold;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #4694BB;
+    font-weight: bold;
+
 }
 
 body h4 {
-	font-size: 22px;
-	font-family: 'Open Sans', sans-serif;
-	color: #FFFEFE;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFEFE;
 }
 
 html {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 a {
-	color: #D1A34F;
-	font-family: "Open Sans";
-	font-size: 14px;
-	font-weight: bold;
-}
-
-label,
-input,
-button,
-select,
-textarea {
-	font-family: 'Open Sans', sans-serif;
-	font-size: inherit;
-	line-height: inherit;
-}
-
-.float-left {
-	float: left;
-}
-
-.float-right {
-	float: right;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .navbar-brand {
-	padding-top: 15px;
-	margin-top: 5px;
-	padding-bottom: 0;
+    padding-top: 15px;
+    margin-top: 5px;
+    padding-bottom: 0;
+
+}
+
+div #stats {
+
+    color: black;
+    font-weight: bold;
+    background-color: white;
 }
 
 .navbar-nav {
-	overflow: hidden;
-	background-color: #6E3E1E;
-	position: fixed;
-	/* Set the navbar to fixed position */
-	top: 0;
-	/* Position the navbar at the top of the page */
-	right: 0;
+    overflow: hidden;
+    background-color: rgba(52, 109, 138, 1);
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    right: 0;
+
+}
+
+#intro img {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
 }
 
 .navbar.navbar-custom ul.nav.navbar-nav {
-	margin-top: 15px;
-	-webkit-transition: all .4s ease-in-out;
-	-moz-transition: all .4s ease-in-out;
-	transition: all .4s ease-in-out;
+    margin-top: 15px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .navbar.navbar-custom.top-nav-collapse ul.nav.navbar-nav {
-	margin-top: 0;
-	-webkit-transition: all .4s ease-in-out;
-	-moz-transition: all .4s ease-in-out;
-	transition: all .4s;
+    margin-top: 0;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s;
 }
 
-.intro {
-	width: 100%;
-	vertical-align: middle;
-	padding-top: 250px;
-	text-align: center;
-	color: white;
-	background-image: url('../img/barBackground.png');
-	height: 720px;
+#intro {
+    width: 100%;
+    vertical-align: middle;
+    padding-top: 345px;
+    text-align: center;
+    color: white;
+    background-image: url('../img/barBackground.png');
+    height: 720px;
 }
 
-#introHeader {
-	text-align: center;
-	padding-right: 400px;
-	padding-bottom: 100px;
-	padding-top: 200px;
+section {
+    padding-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 100vh;
+    background-color: white;
+
 }
 
-.introParagraph {
-	padding-top: 0px;
-}
-
-#page {
-	padding-top: 100px;
-}
-
-#pageEnd {
-	padding-top: 1200px;
-	padding-bottom: 1200px;
-}
-
-#screenshots {
-	padding-top: 200px;
-	width: 200px;
-	float: left;
-}
-
-.statsIcons{
-	height: 200px;
-	width: 200px;
-	float: left;
+.statsIcons {
+    height: 200px;
+    width: 200px;
+    float: left;
 
 }
 
 #stats {
-	display: flex;
+    display: flex;
 }
 
 #stats > div {
-	flex: 1;
+    flex: 1;
 
 }
 
-img {
-	height: 200px;
-	width: 200px;
-	float: right;
+#app img {
+    height: 600px;
+
+}
+
+#stats {
+    padding-left: 80px;
 }

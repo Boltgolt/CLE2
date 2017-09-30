@@ -2,135 +2,132 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="God Zei Drank">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="God Zei Drank">
 
-	<title>GZD</title>
+    <title>GZD</title>
 
-	<!-- css -->
-	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<link href="css/style.css" rel="stylesheet">
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet">
 
-	<script src="/socket.io/socket.io.js"></script>
-	<script src="js/socket.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/socket.js"></script>
 </head>
 
 <body>
-	<div class="wrapper">
-		<nav class="navbar navbar-custom" role="navigation">
-			<div class="container navigation">
+    <div class="wrapper">
+        <nav class="navbar navbar-custom" role="navigation">
+            <div class="container navigation">
 
-				<div class="navbar-brand">
+                <div class="navbar-brand">
 
-				</div>
-				<a class="intro" class="smooth"></a>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-					<ul class="nav navbar-nav">
+                </div>
+                <a class="intro" class="smooth"></a>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
 
-						<li><a href="#intro">Home</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#app">App</a></li>
-						<li><a href="#img">Screenshots</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</div>
-
-				<div class="intro">
-					<a class="intro"></a>
+                        <li><a href="#intro">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#app">App</a></li>
+                        <li><a href="#img">Screenshots</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
 
 
-					<h2>God Zei Drank</h2>
-					<h4>De zelf tappende bier, laat je klanten zelf hun bier tappen.</h4>
-				</div>
+                <section id="intro">
+                    <img src="../website/img/logo.png" alt="test" height="148" width="370" style="float:left;">
+                    <h2>God Zei Drank</h2>
+                    <h4>De zelf tappende bier, laat je klanten zelf hun bier tappen.</h4>
+                </section>
 
-				<div id="stats">
-					<div>
-						<img class="statsIcons" src="../website/img/3personen.svg" alt="user">
-						<div><span id="statsUsersNum">0</span> gebruikers</div>
-					</div>
-					<div>
-						<img class="statsIcons" src="../website/img/bierimg.png" alt="user">
-						<div><span id="statsDrinksNum">0</span> drankjes</div>
-					</div>
-					<div>
-						<img class="statsIcons" src="../website/img/liters.jpg" alt="user">
-						<div><span id="statsDrinksLiter">0</span> liter</div>
-					</div>
-				</div>
+                <div id="stats">
+                    <div>
+                        <img class="statsIcons" src="../website/img/3personen.svg" alt="user">
+                        <div><span id="statsUsersNum">0</span> gebruikers</div>
+                    </div>
+                    <div>
+                        <img class="statsIcons" src="../website/img/bierimg.png" alt="user">
+                        <div><span id="statsDrinksNum">0</span> drankjes</div>
+                    </div>
+                    <div>
+                        <img class="statsIcons" src="../website/img/liters.png" alt="user">
+                        <div><span id="statsDrinksLiter">0</span> liter</div>
+                    </div>
+                </div>
 
 
 
-				<div class="page">
-					<a class="about"></a>
-					<h1>Ons product.</h1><br>
-					<h3>Hoe werkt het?</h3>
-					<p>Ons product is een biertap waar je bier kan tappen zonder telkens af te rekenen. Dit komt omdat er een QR-code aanwezig is op het glas van gebruik. </p>
-					<p>Als je dit glas voor de tap houdt wordt deze code gescand en begint te tap met draaien. Kies zelf de hoeveelheid die je erin wilt doen en hoe vaak je wilt tappen. Vergeet niet af te rekenen! 😉</p>
-					<h3>Waar te gebruiken?</h3>
-					<p>Dit product kan je in alle soorten kroegen en bars te gebruiken. Het product is het meest efficiënt in drukkere kroegen/bars, dit omdat de barman/vrouw niet iedereen tegelijk kan bedienen op drukkere dagen.</p>
-					<h3>Kosten van het product?</h3>
-					<p>De prijs van het product is rond de €99,99 –. Om dit product te bemachtigen neem dan contact op met één van onze medewerkers die u verder kan helpen, scrol naar beneden voor de contactgegevens.</p>
-				</div>
+                <section id="about">
+                    <div class="page">
+                        <h1>Ons product.</h1><br>
+                        <h3>Hoe werkt het?</h3>
+                        <p>Ons product is een biertap waar je bier kan tappen zonder telkens af te rekenen. Dit komt omdat er een QR-code aanwezig is op het glas van gebruik. </p>
+                        <p>Als je dit glas voor de tap houdt wordt deze code gescand en begint te tap met draaien. Kies zelf de hoeveelheid die je erin wilt doen en hoe vaak je wilt tappen. Vergeet niet af te rekenen! 😉</p>
+                        <h3>Waar te gebruiken?</h3>
+                        <p>Dit product kan je in alle soorten kroegen en bars te gebruiken. Het product is het meest efficiënt in drukkere kroegen/bars, dit omdat de barman/vrouw niet iedereen tegelijk kan bedienen op drukkere dagen.</p>
+                        <h3>Kosten van het product?</h3>
+                        <p>De prijs van het product is rond de €99,99 –. Om dit product te bemachtigen neem dan contact op met één van onze medewerkers die u verder kan helpen, scroll naar beneden voor de contactgegevens.</p>
+                    </div>
+                </section>
 
-				<div class="page">
-					<a class="app"></a>
-					<h1>Onze app.</h1><br>
-					<IMG src="../website/img/Bierapp.jpg">
-					<p>Er zijn vele mogelijkheden in onze app. In onze app kan je zien hoeveel biertjes je op heeft en wat de prijs hiervan is. Er is ook een mogelijkheid om jouw vrienden hieraan toe te voegen, hierdoor kun je zien hoeveel biertjes jouw vrienden hebben
-						gedronken. Er is ook een optie dat je voor jouw vrienden kan betalen i.p.v. alleen jezelf, de keuze is aan jou 😉
-					</p>
+                <section id="app">
 
-				</div>
+                    <h1>Onze app.</h1><br>
 
-				<div class="page">
-					<a class="img"></a>
-					<h1>Screenshots go here</h1>
-					<iframe width="720" height="480" src="https://tinkercad.com/embed/hvfnJmaazfr?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-				</div>
+                    <p>Er zijn vele mogelijkheden in onze app. In onze app kan je zien hoeveel biertjes je op heeft en wat de prijs hiervan is. Er is ook een mogelijkheid om jouw vrienden hieraan toe te voegen, hierdoor kun je zien hoeveel biertjes jouw vrienden hebben gedronken. Er is ook een optie dat je voor jouw vrienden kan betalen i.p.v. alleen jezelf, de keuze is aan jou 😉
+                    </p>
+                    <img src="../website/img/Bierapp.jpg">
 
-				<div class="page">
-					<a class="contact"></a>
-					<h1>Contactgegevens.</h1><br>
-					<p>Lem: ikbenbelemmerd@live.nl</p>
-					<p>telefoonnummer: 0612345678</p>
-					<p>Dion: Ikbendionthelion@hotmale.com</p>
-					<p>telefoonnummer: 0612345678</p>
-					<p>Amy: ikbenamy@zonnet.bs</p>
-					<p>telefoonnummer: 0612345678</p>
-					<p>Henkie: ikbenhenkdetank@grinche.is</p>
-					<p>telefoonnummer: 0612345678</p>
-				</div>
+                </section>
 
-			</div>
+                <section id="img">
+                    <h1>3D Model van ons product.</h1>
+                    <iframe width="720" height="480" src="https://tinkercad.com/embed/hvfnJmaazfr?editbtn=0" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                </section>
 
-	</div>
+                <section id="contact">
+                    <h1>Contactgegevens.</h1><br> Lem: ikbenbelemmerd@live.nl
+                    <p>telefoonnummer: 0612345678</p>
+                    Dion: Ikbendionthelion@hotmale.com
+                    <p>telefoonnummer: 0612345678</p>
+                    Amy: ikbenamy@zonnet.bs
+                    <p>telefoonnummer: 0612345678</p>
+                    Henkie: ikbenhenkdetank@grinche.is
+                    <p>telefoonnummer: 0612345678</p>
+                </section>
 
-	<div class="pageEnd">
 
-	</div>
-	<script src="js/jquery-1.10.2.js"></script>
-	<script>
-		$(document).ready(function() {
-			$('a[href*=#]').click(function() {
-				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-					location.hostname == this.hostname) {
-					var $target = $(this.hash);
-					$target = $target.length && $target ||
-						$('[name=' + this.hash.slice(1) + ']');
-					if ($target.length) {
-						var targetOffset = $target.offset().top;
-						$('html,body')
-							.animate({
-								scrollTop: targetOffset
-							}, 1000);
-						return false;
-					}
-				}
-			});
-		});
-	</script>
+
+            </div>
+
+            <div class="pageEnd">
+
+            </div>
+            <script src="js/jquery-1.10.2.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('a[href*=#]').click(function() {
+                        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                            location.hostname == this.hostname) {
+                            var $target = $(this.hash);
+                            $target = $target.length && $target ||
+                                $('[name=' + this.hash.slice(1) + ']');
+                            if ($target.length) {
+                                var targetOffset = $target.offset().top;
+                                $('html,body')
+                                    .animate({
+                                        scrollTop: targetOffset
+                                    }, 500);
+                                return false;
+                            }
+                        }
+                    });
+                });
+            </script>
 
 </body>
 
