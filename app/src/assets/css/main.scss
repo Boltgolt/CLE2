@@ -1,9 +1,12 @@
+@import "vars";
+
 body {
 	margin: 0;
 }
 
 .mdc-toolbar {
 	z-index: 9999;
+	background: $primary-color;
 }
 
 .mdc-temporary-drawer {
@@ -41,7 +44,7 @@ body {
 	vertical-align: middle;
 	margin-top: 9px;
 	margin-right: 20px;
-} 
+}
 
 .menuHamburger {
 	margin-top: 19px;
@@ -56,6 +59,6 @@ body {
 	}
 }
 
-@import "vars";
+@import "group";
 @import "qr";
 @import "stream";

@@ -6,12 +6,9 @@
 
 	<link rel="manifest" href="manifest.json">
 	<meta name="description" content="God Zei Drank App">
-
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon-32x32.png">
+	<meta name="theme-color" content="#4694bb">
 	<meta name="application-name" content="GZD">
-	<meta name="apple-mobile-web-app-title" content="GZD">
-	<meta name="msapplication-starturl" content="/">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<title>God Zei Drank</title>
@@ -26,8 +23,6 @@
 	<script src="static/js/instascan.min.js"></script>
 	<script src="static/js/material-components-web.min.js"></script>
 
-	<script src="static/js/api.js"></script>
-	<script src="static/js/camera.js"></script>
 	<script src="static/js/socket.js"></script>
 	<script src="static/js/main.js"></script>
 </head>
@@ -58,9 +53,12 @@
 					</span>
 				</div>
 			</header>
-			<nav id="icon-with-text-demo" class="mdc-temporary-drawer__content mdc-list">
+			<nav id="drawer" class="mdc-temporary-drawer__content mdc-list">
 				<a class="mdc-list-item mdc-temporary-drawer--selected">
 					<i class="mdi mdi-qrcode-scan mdc-list-item__start-detail" aria-hidden="true"></i> Scan glas
+				</a>
+				<a id="drawerGroup" class="mdc-list-item">
+					<i class="mdi mdi-account-multiple mdc-list-item__start-detail" aria-hidden="true"></i> Groep
 				</a>
 			</nav>
 		</nav>
@@ -69,6 +67,7 @@
 	//= components/stream.html
 
 	//= components/qr.html
+	//= components/group.html
 
 </body>
 

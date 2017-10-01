@@ -11,7 +11,7 @@ module.exports = (server) => {
 			next();
 		}
 		else {
-			db.createUser(req.params.usercode, function(data) {
+			db.createUser(req.params.usercode, req.params.name, function(data) {
 				if (data === false) {
 					res.send(400, {success: false});
 				}

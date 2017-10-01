@@ -15,6 +15,7 @@ db.connect();
 
 // Enable POST data as params
 server.use(restifyPlugins.bodyParser());
+server.use(restifyPlugins.queryParser());
 
 require("./socket.js")(server)
 

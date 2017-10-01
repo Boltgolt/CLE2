@@ -11,22 +11,56 @@ module.exports = (server) => {
 			next();
 		}
 		else {
-			db.users.update({usercode: req.params.usercode}, {
+			db.users.findAndModify({usercode: req.params.usercode}, { cno: 1 }, {
 				$set: {
 					groupcode: req.params.groupcode
 				}
-			}, (err, result) => {
+			}, (err, user) => {
+				console.log(user);
 				// Let the client know if it didn't work
-				if (!result || err) {
+				if (!user || err) {
 					res.send(400, {success: false, error: "Couldn't change group"});
 					next();
 				}
-				// Handle the response and stop
 				else {
-					res.send(200, {success: true});
-					next();
-
-					db.upStat("changedGroup", 1)
+					db.groups.update({groupcode: user.value.groupcode}, {
+						$pull: {
+							users: {
+								usercode: user.value.usercode
+							}
+						},
+					}, (err, result) => {
+						console.log("goy");
+						// Let the client know if it didn't work
+						if (!result || err) {
+							res.send(400, {success: false, error: "Couldn't change group"});
+							next();
+						}
+						else {
+							db.groups.update({groupcode: req.params.groupcode}, {
+								$push: {
+									users: {
+										leader: false,
+										bob: false,
+										name: user.value.name,
+										usercode: user.value.usercode,
+										amount: 0
+									}
+								}
+							}, (err, result) => {
+								// Let the client know if it didn't work
+								if (!result || err) {
+									res.send(400, {success: false, error: "Couldn't change group"});
+									next();
+								}
+								// Handle the response and stop
+								else {
+									res.send(200, {success: true});
+									next()
+								}
+							})
+						}
+					})
 				}
 			})
 		}
@@ -84,6 +118,34 @@ module.exports = (server) => {
 						next();
 					}
 				})
+			})
+		}
+	});
+
+	server.get(PATH + "/get/:id", function(req, res, next) {
+		if (!req.params.id) {
+			res.send(400, {success: false, error: "Missing fields"});
+			next();
+		}
+		else {
+			db.groups.findOne({
+				"groupcode": req.params.id
+			}, (err, result) => {
+				console.log(result);
+
+				// Let the client know if it didn't work
+				if (!result || err) {
+					res.send(400, {success: false, error: "Couldn't change group"});
+					next();
+				}
+				// Handle the response and stop
+				else {
+					delete result._id
+					result.success = true
+
+					res.send(200, result);
+					next()
+				}
 			})
 		}
 	});

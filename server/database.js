@@ -8,7 +8,7 @@ const objectId = mongo.ObjectID;
 const socket = require("./socket.js");
 
 // The db url to connect to
-const URL = "mongodb://localhost:27017";
+const URL = "mongodb://localhost:27017/gzdDB";
 
 // Will contain database instance
 let db;
@@ -89,10 +89,10 @@ module.exports = {
 		});
 	},
 
-	createUser: (usercode, topCallback) => {
+	createUser: (usercode, name, topCallback) => {
 		genToken(3, genToken.HEX, "groups", "code", function(groupcode) {
 			db.collection("users").insertOne({
-				name: "jan",
+				name: name,
 				usercode: usercode,
 				groupcode: groupcode
 			}, (err, userResult) => {
@@ -100,8 +100,13 @@ module.exports = {
 
 				db.collection("groups").insertOne({
 					groupcode: groupcode,
-					leader: usercode,
-					drinks: []
+					users: [{
+						leader: true,
+						bob: false,
+						name: name,
+						usercode: usercode,
+						amount: 0
+					}]
 				}, (err, groupResult) => {
 					if (err) return topCallback(false);
 
@@ -129,17 +134,17 @@ module.exports = {
 		query["$inc"][stat] = add
 
 		db.collection("statistics").update({}, query, function(err, data) {
-			db.collection("statistics").find({}, function(err, data) {
+			db.collection("statistics").findOne({}, function(err, data) {
 			console.log(data);
-			socket.pushStats({
-				users: {
-					total: data.value.users.total
-				},
-				drinks: {
-					total: data.value.drinks.total,
-					ml: data.value.drinks.ml
-				}
-			})
+				socket.pushStats({
+					users: {
+						total: data.users.total
+					},
+					drinks: {
+						total: data.drinks.total,
+						ml: data.drinks.ml
+					}
+				})
 			})
 		})
 	}

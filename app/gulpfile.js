@@ -82,9 +82,8 @@ gulp.task("js:build", function () {
 		.on("error", printError)
 		// Minify the files
 		.pipe(uglify())
-		.pipe(gulp.dest(path.build.js))
-		// Write source maps if we're not in procuction
 		.pipe(sourcemaps.write())
+		.pipe(gulp.dest(path.build.js))		
 })
 
 // Build the css
