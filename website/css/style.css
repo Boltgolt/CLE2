@@ -23,10 +23,11 @@ body h1 {
 body p {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    color: #4694BB;
+    color: ##666;
 }
 
 body h3 {
+    padding-top: 5px;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     color: #4694BB;
@@ -38,6 +39,11 @@ body h4 {
     font-size: 22px;
     font-family: 'Open Sans', sans-serif;
     color: #FFFEFE;
+}
+
+.textLinks {
+    text-align: left;
+    width: 50%;
 }
 
 html {
@@ -63,7 +69,7 @@ div #stats {
 
     color: black;
     font-weight: bold;
-    background-color: white;
+    background-color: #FBFBFB;
 }
 
 .navbar-nav {
@@ -73,7 +79,7 @@ div #stats {
     /* Set the navbar to fixed position */
     top: 0;
     /* Position the navbar at the top of the page */
-    right: 0;
+    left: 0;
 
 }
 
@@ -109,21 +115,24 @@ div #stats {
     height: 720px;
 }
 
+#contact {
+    height: 75%
+}
+
 section {
-    padding-top: 200px;
+    padding: 50px;
+    padding-top: 150px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     height: 100vh;
-    background-color: white;
+    background-color: #FBFBFB;
 
 }
 
 .statsIcons {
     height: 200px;
     width: 200px;
-    float: left;
-
 }
 
 #stats {
@@ -132,10 +141,14 @@ section {
 
 #stats > div {
     flex: 1;
+    text-align: center;
+    padding-top: 30px;
 
 }
 
 #app img {
+    padding-top: 15px;
+    padding-bottom: 90px;
     height: 600px;
 
 }
