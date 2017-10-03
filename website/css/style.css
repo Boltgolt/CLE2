@@ -23,7 +23,7 @@ body h1 {
 body p {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    color: ##666;
+    color: #666;
 }
 
 body h3 {
@@ -80,6 +80,7 @@ div #stats {
     top: 0;
     /* Position the navbar at the top of the page */
     left: 0;
+    z-index: 3;
 
 }
 
@@ -87,12 +88,31 @@ div #stats {
 
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
 
+}
+#headerbar{
+     height: 70px;
+    background: rgba(52, 109, 138, 1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.navimg{
+   
+    position:fixed;
+    left:0;
+    margin-top: 40px;
+   
+    margin-left: 38.5vh;
+    background-color: purple;
+    z-index:99;
+    
 }
 
 .navbar.navbar-custom ul.nav.navbar-nav {
-    margin-top: 15px;
+    margin-top: 0px;
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -116,7 +136,8 @@ div #stats {
 }
 
 #contact {
-    height: 75%
+    padding-top: 40vh;
+    height: 90vh;
 }
 
 section {
